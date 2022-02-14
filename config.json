@@ -1,0 +1,12 @@
+{
+    "prefix": "$",
+    "token": "OTMyMzE4OTYxMzgxNTQ0MDE2.YeRPsg.fiFvSv5bRqOQQyERHUxg9NBmc3M",
+    "emoji": {
+      "play": "<a:playing:940577688169615380>",
+      "stop": "⏹️",
+      "queue": "📄",
+      "success": "<:Brandan_Tick:939819789696786442>",
+      "repeat": "🔁",
+      "error": "<:Brandan_err:939811067037634590>"
+    }
+  }
