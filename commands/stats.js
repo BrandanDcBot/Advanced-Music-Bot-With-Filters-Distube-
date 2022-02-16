@@ -8,7 +8,7 @@ module.exports = {
     message.channel.send({
       embeds: [
         new Discord.MessageEmbed()
-          .setDescription(`**Servers: ${client.guilds.cache.size}
+          .setDescription(`**Servers: 100
                            Users: ${client.users.cache.size}
                            Ping ${client.ws.ping}ms**`)
           .setColor('#ff0000')
