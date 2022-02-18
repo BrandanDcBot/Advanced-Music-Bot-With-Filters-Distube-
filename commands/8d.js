@@ -1,19 +1,18 @@
-const { Message, Client } = require("discord.js");
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-  name: "8d",
-  aliases: ["8d"],
-  description: `set 8d filter in song`,
-  userPermissions: ['CONNECT'],
-  botPermissions: ['CONNECT'],
-  /**
-   *
-   * @param {Client} client
-   * @param {Message} message
-   * @param {String[]} args
-   */
-  run: async (client, message, args) => {
-    // code
-    message.reply(`working`)
-  },
-};
+    name: '8d',
+    aliases: [],
+
+    async execute(client, message) {
+        if (!message.member.voice.channel) return message.channel.send({embeds: [new MessageEmbed().setColor(client.color.error).setDescription(`You must be a voice channel before using this command.`)]});
+		if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send({embeds: [new MessageEmbed().setColor(client.color.error).setDescription(`You are not in same voice channel.`)]});
+		
+        try {
+            await client.distube.setFilter(message, '8d');
+            return message.channel.send({embeds: [new MessageEmbed().setColor(client.color.color).setDescription(`**3D** filter applying to the music.`)]});
+        } catch {
+            return message.channel.send({embeds: [new MessageEmbed().setColor(client.color.error).setDescription(`Currently there are no music is playing.`)]});
+        }
+    }
+}
