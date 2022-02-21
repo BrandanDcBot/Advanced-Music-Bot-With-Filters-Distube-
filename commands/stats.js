@@ -9,10 +9,7 @@ module.exports = {
       embeds: [
         new Discord.MessageEmbed()
         .setColor("#ff0000")
-        .setDescription(`Users: ${client.users.cache.size}`
-                       `Servers: ${client.guilds.cache.size}`
-                       `Ping: ${client.ws.ping}`)
-        .setFooter("Ꭺᴇᴄ丶Legend#0001")
+        .setDescription(`${eval client.users.cache.size}`)
       ]
     })
   }
