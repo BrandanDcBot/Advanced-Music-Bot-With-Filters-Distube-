@@ -1,5 +1,6 @@
 const { totalCores } = require('cpu-stat')
 const Discord = require('discord.js')
+const users = require('discord.js')
 
 module.exports = {
   name: 'stats',
