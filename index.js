@@ -43,7 +43,7 @@ fs.readdir('./commands/', (err, files) => {
 
 client.on('ready', () => {
   console.log(`${client.user.tag} is ready to play music.`)
-  client.user.setPresence({ activities: [{ name: `${client.users.size}Users | ${client.guilds.cache.size}`, type: `LISTENING` }], status: 'idle' })
+  client.user.setPresence({ activities: [{ name: `${client.users}Users | ${client.guilds.cache.size}`, type: `LISTENING` }], status: 'idle' })
 })
 
 client.on('messageCreate', async message => {
