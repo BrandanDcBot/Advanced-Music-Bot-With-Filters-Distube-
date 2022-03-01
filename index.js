@@ -14,7 +14,7 @@ const { SoundCloudPlugin } = require('@distube/soundcloud')
 
 client.config = require('./config.json')
 client.distube = new DisTube(client, {
-  leaveOnStop: false,
+  leaveOnStop: true,
   emitNewSongOnly: true,
   emitAddSongWhenCreatingQueue: false,
   emitAddListWhenCreatingQueue: false,
